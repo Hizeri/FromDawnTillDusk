@@ -1,0 +1,56 @@
+Documentation of 3D FPS Environment Pack - Low Poly:
+
+In this asset pack, we present a comprehensive collection of assets designed to  integrate into your Unity game or multimedia projects, specifically tailored for a 3D First Person Shooter (FPS) environment. Each element is meticulously crafted to ensure optimal performance and visual appeal, allowing for a dynamic and immersive gaming experience.
+
+Introduction:
+The Low Poly 3D FPS Environment Pack offers a variety of assets crafted to enhance the visual aesthetics and gameplay dynamics of your Unity projects. These assets are specifically designed to cater to the requirements of a 3D FPS setting, providing a seamless blend of realism and functionality. you can see all models including old building, different broken houses, factory related models, containers, crates, drums, cannon, woods, fence, roads, bunkers, lights, Factories props with factory building, dumpster, container cabin, Industry Office, utility poles, wires and other necessary models. Also included fire frame particle.
+
+Asset Organization:
+To facilitate ease of use and integration, we have organized the asset pack into the following folders:
+
+Materials:
+Materials are thoughtfully created with multiple options for customization, allowing you to adapt the appearance of the environment elements to suit the theme of your FPS game.
+
+Models:
+Inside the models folder, you'll find a diverse range of assets optimized for real-time rendering. These include structures, props, and various elements crucial for constructing a compelling FPS environment.
+
+Prefabs:
+The prefabs folder contains pre-configured objects, such as buildings, obstacles, and interactive elements. This enables you to efficiently drag and drop these prefabs into your Unity scenes, streamlining the level design process.
+
+Textures:
+This folder contains all the textures, organized into subfolders categorized by model type. You can easily apply these textures to corresponding models. You can see 3 types of textures those are Albedo, Metallic and normal.
+
+Scene:
+In the 'Scene' folder, you'll find three types of scenes (Day, Night and All Models). I've utilized all the models in these scenes according to my plan, but feel free to create your own scene as you desire. Seamlessly switch between the included day and night scenes to dynamically alter the mood and visual aesthetics of your FPS environment.
+
+Terrian:
+
+I added terrain to create mountains and cover the ground in the scene. I used six different textures that you can change as needed when making a new scene for your video game or animation.
+
+Documentation:
+Refer to the readme file within this folder for essential information and instructions on utilizing and customizing the FPS environment assets.
+
+
+Customization:
+Adapting the appearance of your 3D FPS environment is made simple through the following steps:
+
+a. Open your Unity project.
+
+b. Navigate to the "Materials" folder and select the material associated with the element you want to customize.
+
+c. In the Inspector panel, adjust the material's properties to achieve the desired appearance for your environment element.
+
+d. Repeat these steps for each element you wish to customize within your FPS environment.
+
+Usage:
+The 3D FPS Environment Pack is versatile and can be seamlessly integrated into various projects:
+
+Games:
+Incorporate these assets into your FPS games to create immersive and visually stunning environments that enhance the gaming experience.
+
+Videos and Animations:
+Elevate the quality of your videos, animations, or promotional materials by integrating the visually appealing and realistic elements from this asset pack.
+
+The assets are scalable, allowing you to resize them as needed for your project. Additionally, you have the flexibility to rotate and transform each element to align with specific scenes and camera angles.
+
+With the 3D FPS Environment Pack, you have the freedom to effortlessly incorporate these high-quality assets into your Unity project, enriching your FPS game with realistic and captivating environments. Embark on a creative journey and elevate the immersive quality of your games and multimedia projects.
