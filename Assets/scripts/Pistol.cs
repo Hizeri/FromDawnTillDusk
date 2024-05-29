@@ -10,24 +10,33 @@ public class Pistol : MonoBehaviour
     bool isInHand = false;
     [SerializeField] Transform rayPoint;
     [SerializeField] int damage;
+
     [SerializeField] InputActionManager actionManager;
+    [SerializeField] float bulletStartSpeed;
+    [SerializeField] GameObject bulletPrefab;
 
     private void Update()
     {
-        if (actionManager.actionAssets[0].actionMaps[5].FindAction("Activate").triggered)
+        /*if (actionManager.actionAssets[0].actionMaps[5].FindAction("Activate").triggered)
         {
-            print("! Activate");
-            Debug.DrawRay(rayPoint.position, rayPoint.forward*100, Color.blue, 10);
+            Fire();
+        }*/
+    }
 
-            if (Physics.Raycast(rayPoint.position, rayPoint.forward, out RaycastHit info, 200))
-            {
-                print($"! {info.collider.name}");
-                if (info.collider.CompareTag("Zombie"))
-                {
-                    info.collider.GetComponent<Zombie>().GetDamage(damage);
-                }
-            }
-        }
+    public void Fire()
+    {
+        print("! Activate");
+        Debug.DrawRay(rayPoint.position, rayPoint.forward * 100, Color.blue, 10);
+        GameObject newBullet = Instantiate(bulletPrefab, rayPoint.position, Quaternion.identity);
+        newBullet.GetComponent<Rigidbody>().velocity = rayPoint.forward * bulletStartSpeed;
+        /* if (Physics.Raycast(rayPoint.position, rayPoint.forward, out RaycastHit info, 200))
+         {
+             print($"! {info.collider.name}");
+             if (info.collider.CompareTag("Zombie"))
+             {
+                 info.collider.GetComponent<Zombie>().GetDamage(damage);
+             }
+         }*/
     }
 
     public void OnSelected()

@@ -7,6 +7,6 @@ public class Menu : MonoBehaviour
 {
     public void Restart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
