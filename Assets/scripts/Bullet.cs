@@ -11,9 +11,12 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log($"ПОПАЛИ: {collision.gameObject.name}");
+
         if (collision.collider.CompareTag("Zombie"))
         {
             collision.gameObject.GetComponent<Zombie>().GetDamage(damage);
+            Debug.Log("ПОПАЛИ: попали в зомби");
         }
 
         Destroy(gameObject);

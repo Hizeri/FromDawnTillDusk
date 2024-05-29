@@ -11,12 +11,17 @@ public class Zombie : MonoBehaviour
     [SerializeField] Door door;
     [SerializeField] int damage;
     [SerializeField] int hp;
+    [SerializeField] float timeToDestroy;
+    [SerializeField] BoxCollider collider;
+    [SerializeField] ZombieDeathCounter counter;
 
 
     private void Start()
     {
         endWaypoint = GameObject.FindWithTag("EndWaipoint").transform;
         door = GameObject.FindObjectOfType<Door>();
+        counter = GameObject.FindObjectOfType<ZombieDeathCounter>();
+
         var path = new NavMeshPath();
         agent.CalculatePath(endWaypoint.position, path);
         agent.SetPath(path);
@@ -36,7 +41,12 @@ public class Zombie : MonoBehaviour
 
         if (hp <= 0)
         {
-            Destroy(gameObject);
+            counter.OnZombieDeath();
+            Destroy(gameObject,timeToDestroy);
+            collider.enabled = false;
+            animator.SetTrigger("die");
+            this.enabled = false;
+            agent.enabled = false;
         }
     }
 

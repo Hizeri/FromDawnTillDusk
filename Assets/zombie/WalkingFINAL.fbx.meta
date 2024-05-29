@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d8022d003b01b8a45b1760800cde499a
+guid: 5255b2740727c6a40a4d87279fea7354
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -33,21 +33,21 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: mixamo.com
+      name: finalwalking
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 117
+      lastFrame: 46
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 1
+      loopBlendPositionY: 0
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1

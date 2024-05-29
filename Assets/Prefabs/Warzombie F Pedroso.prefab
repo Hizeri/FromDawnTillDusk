@@ -114,7 +114,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.3
-  m_Speed: 10
+  m_Speed: 1.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -144,6 +144,8 @@ MonoBehaviour:
   door: {fileID: 0}
   damage: 15
   hp: 50
+  timeToDestroy: 30
+  collider: {fileID: 489452599868489257}
 --- !u!65 &489452599868489257
 BoxCollider:
   m_ObjectHideFlags: 0
