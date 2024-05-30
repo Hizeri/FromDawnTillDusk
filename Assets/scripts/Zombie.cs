@@ -12,8 +12,10 @@ public class Zombie : MonoBehaviour
     [SerializeField] int damage;
     [SerializeField] int hp;
     [SerializeField] float timeToDestroy;
-    [SerializeField] BoxCollider collider;
+    [SerializeField] Collider collider;
     [SerializeField] ZombieDeathCounter counter;
+
+    bool isArrived = false;
 
 
     private void Start()
@@ -29,10 +31,24 @@ public class Zombie : MonoBehaviour
 
     void Update()
     {
-        agent.SetDestination(endWaypoint.position);
-        if (agent.remainingDistance == 0)
+        if (isArrived == false) 
+        {
+            agent.SetDestination(endWaypoint.position);
+        }
+
+/*        if (agent.remainingDistance == 0)
         {
             animator.SetBool("attack", true);
+        }*/
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.tag == "Door")
+        {
+            animator.SetBool("attack", true);
+            isArrived = true;
+            agent.Stop();
         }
     }
     public void GetDamage(int damage)

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - EndWaipoint
   - Zombie
+  - Ladder
+  - Door
   layers:
   - Default
   - TransparentFX

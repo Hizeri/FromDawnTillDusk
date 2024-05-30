@@ -4,19 +4,16 @@ using UnityEngine;
 
 public class spawner : MonoBehaviour
 {
-    [SerializeField] private GameObject spawnPoint1;
-    [SerializeField] private GameObject spawnPoint2;
-    [SerializeField] private GameObject spawnPoint3;
-    [SerializeField] private GameObject spawnPoint4;
-
+    [SerializeField] Transform[] spawnPoints;
     [SerializeField] List<GameObject> aliveEnemies;
+    private int lastChoosedSpawnPointIndex;
+
 
     [SerializeField] private GameObject enemy;
     [SerializeField] private int maxEnemyCountOnScene;
     [SerializeField] private float timeBetweenSpawn;
     private float timeToNextSpawn;
 
-   
     void Update()
     {
         timeToNextSpawn += Time.deltaTime;
@@ -26,17 +23,20 @@ public class spawner : MonoBehaviour
             //spawn
             if (aliveEnemies.Count < maxEnemyCountOnScene)
             {
-                int rnd = Random.Range(0, 4);
+                int rnd = Random.Range(0, spawnPoints.Length);
                 Vector3 spawnPosition = Vector3.zero;
 
-                if (rnd == 0)
-                    spawnPosition = spawnPoint1.transform.position;
-                else if (rnd == 1)
-                    spawnPosition = spawnPoint2.transform.position;
-                else if (rnd == 2)
-                    spawnPosition = spawnPoint3.transform.position;
-                else if (rnd == 3)
-                    spawnPosition = spawnPoint4.transform.position;
+                int debug = rnd;
+                spawnPosition = spawnPoints[rnd].position;
+
+                while (lastChoosedSpawnPointIndex == debug)
+                {
+                    debug = Random.Range(0, spawnPoints.Length);
+                    spawnPosition = spawnPoints[debug].position;
+                }
+
+                lastChoosedSpawnPointIndex = debug;
+                Debug.Log($"Spawned at point {spawnPoints[debug].name}");
 
                 GameObject newEnemy = Instantiate(enemy, spawnPosition, Quaternion.identity); //здесь создаем копию объекта
                 aliveEnemies.Add(newEnemy);
