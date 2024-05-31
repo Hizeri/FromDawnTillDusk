@@ -57,6 +57,7 @@ public class Zombie : MonoBehaviour
 
         if (hp <= 0)
         {
+            Debug.Log("death");
             counter.OnZombieDeath();
             Destroy(gameObject,timeToDestroy);
             collider.enabled = false;
