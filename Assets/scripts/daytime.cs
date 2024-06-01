@@ -15,7 +15,7 @@ public class daytime : MonoBehaviour
     {
 
         actualTime += Time.deltaTime;
-        timeText.SetText(Mathf.Round(actualTime).ToString());
+        timeText.text = Mathf.Round(actualTime).ToString();
 
         if (actualTime >= nightTime)
         {
